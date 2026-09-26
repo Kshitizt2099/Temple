@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Activities = () => {
   const events = [
     { title: 'महा आरती', time: 'प्रतिदिन शाम 7:00 बजे', desc: 'संध्या आरती में भाग लें और पुण्य कमाएं।' },

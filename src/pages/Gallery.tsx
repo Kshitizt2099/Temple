@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Gallery = () => {
   const images = [
     'https://images.unsplash.com/photo-1548625361-26c79a83857b?auto=format&fit=crop&q=80&w=400',

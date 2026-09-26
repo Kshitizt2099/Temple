@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Home, Info, Calendar, Image as ImageIcon, Heart, Phone, MapPin } from 'lucide-react';
 
