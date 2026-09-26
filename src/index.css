@@ -209,6 +209,126 @@ a {
   border-radius: 2px;
 }
 
+/* Utility classes for new layout */
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+.grid-3 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+@media (min-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  background-image: url('/temple-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.feature-box {
+  background: var(--white);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--primary);
+  transition: transform 0.2s;
+}
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.section-bg {
+  background-color: var(--white);
+  padding: 4rem 0;
+}
+.section-alt {
+  background-color: #FDF8F5;
+  padding: 4rem 0;
+}
+
+.god-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.god-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+.god-card:hover img {
+  transform: scale(1.05);
+}
+.god-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+.btn-red {
+  background: var(--red);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+}
+.btn-red:hover {
+  background: #B71C1C;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+.event-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+.event-date {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 60px;
+  font-weight: bold;
+}
+
 /* Desktop overrides */
 @media (min-width: 768px) {
   .bottom-nav {

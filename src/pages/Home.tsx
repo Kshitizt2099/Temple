@@ -2,35 +2,175 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className="section">
-      <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <img 
-            src="https://images.unsplash.com/photo-1548625361-26c79a83857b?auto=format&fit=crop&q=80&w=800" 
-            alt="Temple" 
-            style={{ width: '100%', borderRadius: '16px', maxHeight: '300px', objectFit: 'cover' }}
-          />
+    <>
+      <section className="hero-section">
+        <div className="hero-overlay">
+          <img src="images/temple_bg.jpeg" alt="" height={'100%'} width={'100%'} />
         </div>
-        <h2 className="section-title">स्वागत है</h2>
-        <p className="text-center" style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
-          प्राचीन शिव दुर्गा मंदिर में आपका हार्दिक स्वागत है। 
-        </p>
-        
-        <div className="card">
-          <h3 className="text-primary" style={{ textAlign: 'center' }}>दैनिक दर्शन</h3>
-          <p className="text-center text-secondary">प्रातः 5:00 बजे से रात्रि 9:00 बजे तक</p>
+        <div className="container hero-content">
+          <p style={{ fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'bold', textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>आस्था • सेवा • संस्कार</p>
+          <h1 style={{ fontSize: '3.5rem', color: '#FFD700', textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,0.5)', marginBottom: '0.5rem', lineHeight: '1.2' }}>
+            प्राचीन शिव दुर्गा मंदिर
+          </h1>
+          <p style={{ fontSize: '1.8rem', marginBottom: '1.5rem', fontWeight: 'bold', textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>लोनी, गाजियाबाद</p>
+          <p style={{ fontSize: '1.1rem', marginBottom: '2rem', maxWidth: '400px', textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
+            भगवान शिव और माता दुर्गा की कृपा से आपके जीवन में सुख, शांति और समृद्धि आए
+          </p>
+          <button className="btn btn-red" style={{ padding: '0.8rem 1.5rem', fontSize: '1.1rem', borderRadius: '50px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }}>
+            🙏 मंदिर के दर्शन करें
+          </button>
         </div>
-        
-        <div className="card">
-          <h3 className="text-primary" style={{ textAlign: 'center' }}>विशेष सूचना</h3>
-          <p className="text-center text-secondary">आगामी महाशिवरात्रि के लिए विशेष आयोजन की तैयारी चल रही है।</p>
+      </section>
+
+      <section className="section-alt">
+        <div className="container">
+          <div className="grid-4">
+            <div className="feature-box">
+              <h3 className="text-primary">मंदिर परिचय</h3>
+              <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>मंदिर का इतिहास, महत्व और हमारी आस्था की कहानी।</p>
+              <button className="btn btn-outline" style={{ padding: '0.4rem 1rem', fontSize: '0.8rem', borderRadius: '50px' }}>और पढ़ें →</button>
+            </div>
+            <div className="feature-box">
+              <h3 className="text-primary">पूजा / आरती समय</h3>
+              <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>दैनिक पूजा, आरती और विशेष अनुष्ठान का समय।</p>
+              <button className="btn btn-outline" style={{ padding: '0.4rem 1rem', fontSize: '0.8rem', borderRadius: '50px' }}>समय देखें →</button>
+            </div>
+            <div className="feature-box">
+              <h3 className="text-primary">आगामी कार्यक्रम</h3>
+              <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>राम कथा, भंडारा, उत्सव और अन्य धार्मिक कार्यक्रम की जानकारी।</p>
+              <button className="btn btn-outline" style={{ padding: '0.4rem 1rem', fontSize: '0.8rem', borderRadius: '50px' }}>कार्यक्रम देखें →</button>
+            </div>
+            <div className="feature-box">
+              <h3 className="text-primary">दान / भेंट</h3>
+              <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>मंदिर सेवा और विकास के लिए ऑनलाइन दान करें।</p>
+              <button className="btn btn-red" style={{ padding: '0.4rem 1rem', fontSize: '0.8rem', borderRadius: '50px' }}>अब दान करें →</button>
+            </div>
+          </div>
         </div>
-        
-        <div className="flex justify-center" style={{ marginTop: '2rem' }}>
-          <button className="btn btn-primary">आज के दर्शन</button>
+      </section>
+
+      <section className="section-bg">
+        <div className="container">
+          <div className="grid-2" style={{ alignItems: 'center', }}>
+            <div>
+              <h2 className="text-primary" style={{ borderBottom: '2px solid var(--primary)', display: 'inline-block', paddingBottom: '0.5rem', marginBottom: '1.5rem' }}>हमारे मंदिर के बारे में</h2>
+              <p style={{ lineHeight: '1.8', marginBottom: '2rem' }}>
+                प्राचीन शिव दुर्गा मंदिर, लोनी, गाजियाबाद आस्था, भक्ति और संस्कारों का पावन स्थल है। यहाँ भगवान शिव और माता दुर्गा की प्रतिमाएँ श्रद्धालुओं के लिए विशेष आकर्षण का केंद्र हैं।
+                यह मंदिर वर्षों से समाज में आध्यात्मिक ऊर्जा, सांस्कृतिक मूल्यों और धार्मिक एकता का प्रतीक बना हुआ है।
+              </p>
+              <button className="btn btn-red" style={{ borderRadius: '50px', padding: '0.6rem 1.5rem' }}>और जानें →</button>
+            </div>
+            <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-md)', maxHeight: '500px', maxWidth: '500px' }}>
+              <video
+                src="/videos/templeVideo.mp4"
+                controls
+                autoPlay
+                muted
+                loop
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <section className="section-alt">
+        <div className="container">
+          <div className="grid-2">
+            <div>
+              <div className="flex justify-between items-center" style={{ marginBottom: '1rem' }}>
+                <h3 className="text-primary" style={{ margin: 0 }}>📷 फोटो गैलरी</h3>
+                <button className="btn btn-outline" style={{ padding: '0.2rem 0.8rem', fontSize: '0.8rem', borderRadius: '50px' }}>सभी फोटो देखें →</button>
+              </div>
+              <div className="grid-2" style={{ gap: '0.5rem' }}>
+                <img src="https://images.unsplash.com/photo-1548625361-26c79a83857b?auto=format&fit=crop&q=80&w=200" alt="Gallery" style={{ width: '100%', borderRadius: '8px' }} />
+                <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&q=80&w=200" alt="Gallery" style={{ width: '100%', borderRadius: '8px' }} />
+                <img src="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?auto=format&fit=crop&q=80&w=200" alt="Gallery" style={{ width: '100%', borderRadius: '8px' }} />
+                <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&q=80&w=200" alt="Gallery" style={{ width: '100%', borderRadius: '8px' }} />
+              </div>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-center" style={{ marginBottom: '1rem' }}>
+                <h3 className="text-primary" style={{ margin: 0 }}>📅 आगामी कार्यक्रम</h3>
+                <button className="btn btn-outline" style={{ padding: '0.2rem 0.8rem', fontSize: '0.8rem', borderRadius: '50px' }}>सभी देखें →</button>
+              </div>
+              <div style={{ background: 'var(--white)', padding: '1rem', borderRadius: '8px', boxShadow: 'var(--shadow-sm)' }}>
+                <ul className="event-list">
+                  <li className="event-item">
+                    <div className="event-date">
+                      <div style={{ fontSize: '1.2rem' }}>05</div>
+                      <div style={{ fontSize: '0.8rem' }}>अक्टूबर</div>
+                    </div>
+                    <div>
+                      <h4 style={{ margin: '0 0 0.3rem 0', color: 'var(--text-dark)' }}>शारदीय नवरात्रि प्रारंभ</h4>
+                      <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-light)' }}>विशेष पूजा एवं दुर्गा सप्तशती पाठ</p>
+                    </div>
+                  </li>
+                  <li className="event-item">
+                    <div className="event-date">
+                      <div style={{ fontSize: '1.2rem' }}>11</div>
+                      <div style={{ fontSize: '0.8rem' }}>अक्टूबर</div>
+                    </div>
+                    <div>
+                      <h4 style={{ margin: '0 0 0.3rem 0', color: 'var(--text-dark)' }}>कन्या पूजन एवं भंडारा</h4>
+                      <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-light)' }}>सभी भक्तों का स्वागत है</p>
+                    </div>
+                  </li>
+                  <li className="event-item">
+                    <div className="event-date">
+                      <div style={{ fontSize: '1.2rem' }}>02</div>
+                      <div style={{ fontSize: '0.8rem' }}>नवंबर</div>
+                    </div>
+                    <div>
+                      <h4 style={{ margin: '0 0 0.3rem 0', color: 'var(--text-dark)' }}>देव दीपावली विशेष आरती</h4>
+                      <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-light)' }}>संध्या 7 बजे से</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-bg" style={{ paddingBottom: '2rem' }}>
+        <div className="container">
+          <div className="grid-3">
+            <div>
+              <h3 className="text-primary" style={{ marginBottom: '1rem' }}>📞 हमसे जुड़ें</h3>
+              <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}>📍 <strong>पता:</strong> प्राचीन शिव दुर्गा मंदिर, लोनी, गाजियाबाद, उत्तर प्रदेश - 201102</p>
+              <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}>📞 <strong>फोन:</strong> +91 9312081077</p>
+              <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}>📧 <strong>ईमेल:</strong> shivdurgamandir.loni@gmail.com</p>
+            </div>
+            <div>
+              <h3 className="text-primary" style={{ marginBottom: '1rem' }}>📍 मैप / स्थान</h3>
+              <div style={{ background: '#eee', height: '120px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ color: 'var(--text-light)' }}>Google Map Embed</span>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-primary" style={{ marginBottom: '1rem' }}>✉️ जल्दी संपर्क करें</h3>
+              <form style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  <input type="text" placeholder="आपका नाम" style={{ width: '100%', padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc' }} />
+                  <input type="text" placeholder="मोबाइल नंबर" style={{ width: '100%', padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc' }} />
+                </div>
+                <textarea placeholder="संदेश" rows={2} style={{ width: '100%', padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc' }}></textarea>
+                <button type="button" className="btn btn-red" style={{ width: '100%', padding: '0.5rem' }}>भेजें</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer style={{ background: 'var(--red)', color: 'white', padding: '1rem', textAlign: 'center', fontSize: '0.8rem' }}>
+        <div className="container flex justify-between items-center">
+          <p style={{ margin: 0 }}>© 2024 प्राचीन शिव दुर्गा मंदिर, लोनी, गाजियाबाद | सभी अधिकार सुरक्षित</p>
+          <p style={{ margin: 0 }}>Designed with ♥ for Devotion</p>
+        </div>
+      </footer>
+    </>
   );
 };
 
