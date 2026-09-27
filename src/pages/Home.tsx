@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom';
+
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section className="hero-section">
@@ -67,6 +70,7 @@ const Home = () => {
                 loop
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
+              {/* <img src={`images/Ganesh.jpeg`} style={{ width: '100%', height: 'auto' }} alt="ganesh" /> */}
             </div>
           </div>
         </div>
@@ -78,13 +82,15 @@ const Home = () => {
             <div>
               <div className="flex justify-between items-center" style={{ marginBottom: '1rem' }}>
                 <h3 className="text-primary" style={{ margin: 0 }}>📷 फोटो गैलरी</h3>
-                <button className="btn btn-outline" style={{ padding: '0.2rem 0.8rem', fontSize: '0.8rem', borderRadius: '50px' }}>सभी फोटो देखें →</button>
+                <button onClick={() => navigate('/gallery')} className="btn btn-outline" style={{ padding: '0.2rem 0.8rem', fontSize: '0.8rem', borderRadius: '50px' }}>सभी फोटो देखें →</button>
               </div>
               <div className="grid-2" style={{ gap: '0.5rem' }}>
-                <img src="https://images.unsplash.com/photo-1548625361-26c79a83857b?auto=format&fit=crop&q=80&w=200" alt="Gallery" style={{ width: '100%', borderRadius: '8px' }} />
-                <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&q=80&w=200" alt="Gallery" style={{ width: '100%', borderRadius: '8px' }} />
-                <img src="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?auto=format&fit=crop&q=80&w=200" alt="Gallery" style={{ width: '100%', borderRadius: '8px' }} />
-                <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&q=80&w=200" alt="Gallery" style={{ width: '100%', borderRadius: '8px' }} />
+                <img src={`images/Ganesh.jpeg`} style={{ width: '100%', height: '250px' }} alt="ganesh" />
+                <img src="images/hanuman.jpeg" alt="Gallery" style={{ width: '100%', height: '250px', borderRadius: '8px' }} />
+                <img src="images/shivParvati.jpeg" alt="Gallery" style={{ width: '100%', borderRadius: '8px', height: '250px' }} />
+                <img src="images/Mata1.jpeg" alt="Gallery" style={{ width: '100%', borderRadius: '8px', height: '250px' }} />
+
+
               </div>
             </div>
 

@@ -32,15 +32,13 @@ const Navigation = () => {
         </div>
       </div>
 
-      <header style={{ background: 'white', padding: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', borderBottom: '2px solid var(--red)' }}>
-
-        <div style={{ textAlign: 'center' }}>
-          <h1 style={{ color: 'var(--red)', margin: 0, fontSize: '2.5rem', textShadow: '1px 1px 2px rgba(0,0,0,0.1)' }}>प्राचीन शिव दुर्गा मंदिर</h1>
-          <p style={{ color: 'var(--text-dark)', fontWeight: '600', margin: 0 }}>लोनी, गाजियाबाद (उत्तर प्रदेश)</p>
-        </div>
-
-
-      </header>
+      <div className="sticky-header-desktop">
+        <header style={{ background: 'white', padding: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', borderBottom: '2px solid var(--red)' }}>
+          <div style={{ textAlign: 'center' }}>
+            <h1 style={{ color: 'var(--red)', margin: 0, fontSize: '2.5rem', textShadow: '1px 1px 2px rgba(0,0,0,0.1)' }}>प्राचीन शिव दुर्गा मंदिर</h1>
+            <p style={{ color: 'var(--text-dark)', fontWeight: '600', margin: 0 }}>लोनी, गाजियाबाद (उत्तर प्रदेश)</p>
+          </div>
+        </header>
 
       {/* Desktop Red Nav Bar */}
       <nav style={{ background: 'var(--red)', padding: '0' }} className="desktop-nav-bar">
@@ -58,13 +56,20 @@ const Navigation = () => {
           ))}
         </div>
       </nav>
+      </div>
 
       <style>{`
+        .sticky-header-desktop {
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+        }
         .nav-link-top:hover { background: #B71C1C; }
         .nav-link-top.active { background: #FFC107; color: var(--red) !important; }
         @media (max-width: 768px) {
           .desktop-nav-bar { display: none; }
           .top-header-mobile { display: flex; }
+          .sticky-header-desktop { position: static; }
         }
       `}</style>
 

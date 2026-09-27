@@ -1,22 +1,26 @@
 const Gallery = () => {
   const images = [
-    'https://images.unsplash.com/photo-1548625361-26c79a83857b?auto=format&fit=crop&q=80&w=400',
-    'https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&q=80&w=400',
-    'https://images.unsplash.com/photo-1605647540924-852290f6b0d5?auto=format&fit=crop&q=80&w=400',
-    'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&q=80&w=400'
+    'images/Ganesh.jpeg',
+    'images/DurgaMata.jpeg',
+    'images/Mata1.jpeg',
+    'images/shivParvati.jpeg',
+    'images/hanuman.jpeg',
+    'images/temple_bg.jpeg'
   ];
 
   return (
-    <div className="section">
+    <div className="section-alt" style={{ padding: '4rem 0', minHeight: '100vh' }}>
       <div className="container">
-        <h2 className="section-title">Photo Gallery</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '1rem' }}>
+        <h2 className="text-primary" style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2.5rem' }}>फोटो गैलरी</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
           {images.map((src, index) => (
-            <div key={index} style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-sm)' }}>
+            <div key={index} style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
               <img 
                 src={src} 
-                alt={`Temple ${index + 1}`} 
-                style={{ width: '100%', height: '150px', objectFit: 'cover', display: 'block' }}
+                alt={`Temple Gallery ${index + 1}`} 
+                style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block', transition: 'transform 0.3s ease' }}
+                onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
               />
             </div>
           ))}
