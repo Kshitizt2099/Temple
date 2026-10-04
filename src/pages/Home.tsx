@@ -78,7 +78,7 @@ const Home = () => {
                 loop
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />}
-              {/* <img src={`images/Ganesh.jpeg`} style={{ width: '100%', height: 'auto' }} alt="ganesh" /> */}
+              {!loading && error && <p style={{ color: 'var(--text-light)', fontSize: '0.9rem' }}>Video not found.</p>}
             </div>
           </div>
         </div>
