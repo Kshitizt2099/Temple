@@ -15,6 +15,7 @@ interface UseContentsReturn {
   loading: boolean;
   error: string | null;
   refetch: () => void;
+  video: ContentRecord[];
 }
 
 export function useContents(): UseContentsReturn {
@@ -52,10 +53,15 @@ export function useContents(): UseContentsReturn {
     () => records.filter(r => r.tyepOfContent === 'image'),
     [records]
   );
+  const video = useMemo(
+    () => records.filter(r => r.tyepOfContent === 'video'),
+    [records]
+  );
 
   return {
     records,
     images,
+    video,
     loading,
     error,
     refetch: fetchContents,

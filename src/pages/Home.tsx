@@ -1,7 +1,14 @@
 import { useNavigate } from 'react-router-dom';
+import { useContents } from '../hooks/useContents';
 
 const Home = () => {
   const navigate = useNavigate();
+  const { loading, error, video } = useContents();
+
+  // Pick the video tagged for the homepage
+  const homeVideo = video.find(v => v.Position?.toLowerCase() === 'homepage');
+  const videoSrc = homeVideo?.content ?? '/videos/templeVideo.mp4';
+
   return (
     <>
       <section className="hero-section">
@@ -62,14 +69,15 @@ const Home = () => {
               <button className="btn btn-red" style={{ borderRadius: '50px', padding: '0.6rem 1.5rem' }}>और जानें →</button>
             </div>
             <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-md)', maxHeight: '500px', maxWidth: '500px' }}>
-              <video
-                src="/videos/templeVideo.mp4"
+              {loading && <p style={{ color: 'var(--text-light)', fontSize: '0.9rem' }}>Loading video...</p>}
+              {!loading && <video
+                src={videoSrc}
                 controls
                 autoPlay
                 muted
                 loop
                 style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
+              />}
               {/* <img src={`images/Ganesh.jpeg`} style={{ width: '100%', height: 'auto' }} alt="ganesh" /> */}
             </div>
           </div>
